@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./chat.css";
 import EmojiPicker from "emoji-picker-react";
 
 const Chat = () => {
   const [open, setOpen] = useState(false);
   const [Text, setText] = useState("");
+  const endRef = useRef(null);
+
+  useEffect(() => {
+    endRef.current.scrollIntoView({ behavior: "smooth" });
+  }
+  , [Text]);
   const handleEmoji = (e) => {
     setText((prev) => prev + e.emoji);
     setOpen(false);
@@ -72,6 +78,8 @@ const Chat = () => {
                 <p>This is just some random testing text! Don't bother reading it or you will just waste your time!!</p>
                 <span>1 min ago</span>
             </div>
+            <div ref={endRef}></div>
+        
         </div>
       </div>
       <div className="bottom">
