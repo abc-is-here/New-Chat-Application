@@ -40,20 +40,7 @@ const ChatList = () => {
                 <p>Do my Homework!</p>
             </div>
         </div>
-        <div className="item">
-            <img src="./avatar.png" alt="" />
-            <div className="texts">
-                <span>Nirbhay Gupta</span>
-                <p>Do my Homework!</p>
-            </div>
-        </div>
-        <div className="item">
-            <img src="./avatar.png" alt="" />
-            <div className="texts">
-                <span>Nirbhay Gupta</span>
-                <p>Do my Homework!</p>
-            </div>
-        </div>
+        
     </div>
   )
 }
